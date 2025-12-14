@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getAssetPath } from "../lib/basePath";
 
 export default function Hero() {
   return (
@@ -7,7 +8,7 @@ export default function Hero() {
         <div className="mb-8">
           <div className="relative w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden border-4 border-gray-800">
             <Image
-              src="/assets/Facetune_05-10-2025-17-24-19-b0e092cc-5c1c-4e61-92b3-6ca194bbd7c1.png"
+              src={getAssetPath("/assets/Facetune_05-10-2025-17-24-19-b0e092cc-5c1c-4e61-92b3-6ca194bbd7c1.png")}
               alt="Samuel Olamide"
               fill
               className="object-cover object-top "
