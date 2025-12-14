@@ -3,7 +3,7 @@
 import { blogPosts } from "../data/blogPosts";
 import { useState } from "react";
 
-const POSTS_PER_PAGE = 6;
+const POSTS_PER_PAGE = 3;
 
 export default function BlogSection() {
   const [currentPage, setCurrentPage] = useState(1);
