@@ -33,21 +33,9 @@ jobs:
 
       - name: Build
         run: npm run build
-        env:
-          NODE_ENV: production
       
       - name: Ensure .nojekyll exists
         run: touch out/.nojekyll
-      
-      - name: Verify CSS file exists
-        run: |
-          if [ ! -f "out/_next/static/css/"*.css ]; then
-            echo "ERROR: CSS file not found!"
-            exit 1
-          else
-            echo "CSS file found:"
-            ls -lh out/_next/static/css/*.css
-          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
