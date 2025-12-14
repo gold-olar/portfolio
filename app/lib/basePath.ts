@@ -16,14 +16,19 @@ export function getAssetPath(path: string): string {
   }
   
   if (!path) {
-    return path;
+    throw new Error('getAssetPath requires a non-empty path');
   }
   
   // Ensure path starts with /
   const normalizedPath = path.startsWith('/') ? path : `/${path}`;
   
-  // If basePath is empty (development) or path already includes it, return normalized path
-  if (!basePath || normalizedPath.startsWith(basePath)) {
+  // If basePath is empty (development), return normalized path
+  if (!basePath) {
+    return normalizedPath;
+  }
+  
+  // Check if path already includes basePath (with proper boundary checking)
+  if (normalizedPath === basePath || normalizedPath.startsWith(basePath + '/')) {
     return normalizedPath;
   }
   
