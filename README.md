@@ -55,7 +55,7 @@ The site will be available at: `https://gold-olar.github.io/portfolio`
 When adding images or other assets from the `/public` folder, always use the `getAssetPath()` helper to ensure they work correctly on GitHub Pages:
 
 ```typescript
-import { getAssetPath } from '@/app/lib/basePath';
+import { getAssetPath } from "../lib/basePath";
 
 // Use getAssetPath for public folder assets
 <Image src={getAssetPath("/assets/image.png")} alt="Description" />
