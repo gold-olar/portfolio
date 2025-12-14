@@ -15,12 +15,13 @@ export function getAssetPath(path: string): string {
     throw new TypeError('getAssetPath expects a string argument');
   }
   
-  if (!path) {
+  const trimmedPath = path.trim();
+  if (!trimmedPath) {
     throw new Error('getAssetPath requires a non-empty path');
   }
   
   // Ensure path starts with /
-  const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+  const normalizedPath = trimmedPath.startsWith('/') ? trimmedPath : `/${trimmedPath}`;
   
   // If basePath is empty (development), return normalized path
   if (!basePath) {
