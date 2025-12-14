@@ -10,13 +10,13 @@ export const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : '
  * This ensures assets are correctly prefixed with the basePath in production
  */
 export function getAssetPath(path: string): string {
-  // If the path already starts with the basePath, return it as-is
-  if (path.startsWith(basePath)) {
-    return path;
-  }
-  
   // Ensure path starts with /
   const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+  
+  // If basePath is empty (development) or path already includes it, return normalized path
+  if (!basePath || normalizedPath.startsWith(basePath)) {
+    return normalizedPath;
+  }
   
   return `${basePath}${normalizedPath}`;
 }
