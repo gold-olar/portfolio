@@ -11,11 +11,11 @@ export const contactInfo = {
   socialLinks: [
     {
       name: "LinkedIn",
-      url: "https://linkedin.com/in/samuel-olamide",
+      url: "https://www.linkedin.com/in/olamidesamuel",
     },
     {
       name: "GitHub",
-      url: "https://github.com/samuel-olamide",
+      url: "https://github.com/gold-olar",
     },
     // Add more social links as needed
   ] as SocialLink[],
