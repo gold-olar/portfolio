@@ -45,5 +45,20 @@ The site will be available at: `https://gold-olar.github.io/portfolio`
 ## Project Structure
 
 - `/app` - Next.js app directory with pages and layouts
+  - `/app/lib/basePath.ts` - Utility for handling basePath-aware asset paths
+  - `/app/components` - React components
 - `/public` - Static assets
 - `.github/workflows` - GitHub Actions workflow for deployment
+
+## Working with Public Assets
+
+When adding images or other assets from the `/public` folder, always use the `getAssetPath()` helper to ensure they work correctly on GitHub Pages:
+
+```typescript
+import { getAssetPath } from '@/lib/basePath';
+
+// Use getAssetPath for public folder assets
+<Image src={getAssetPath("/assets/image.png")} alt="Description" />
+```
+
+This ensures assets are correctly prefixed with `/portfolio/` in production while remaining unprefixed in development.
