@@ -27,7 +27,7 @@ export default function ContactSection() {
             href={`mailto:${contactInfo.email}`}
             className="group bg-black border border-gray-800 rounded-lg p-6 hover:border-gray-700 hover:transform hover:scale-105 transition-all duration-300"
           >
-            <div className="text-4xl mb-4">📧</div>
+            {/* <div className="text-4xl mb-4">📧</div> */}
             <h3 className="text-lg font-semibold text-gray-400 mb-2 group-hover:text-gray-300 transition-colors">
               Email
             </h3>
@@ -41,7 +41,7 @@ export default function ContactSection() {
             href={`tel:${contactInfo.phone}`}
             className="group bg-black border border-gray-800 rounded-lg p-6 hover:border-gray-700 hover:transform hover:scale-105 transition-all duration-300"
           >
-            <div className="text-4xl mb-4">📱</div>
+            {/* <div className="text-4xl mb-4">📱</div> */}
             <h3 className="text-lg font-semibold text-gray-400 mb-2 group-hover:text-gray-300 transition-colors">
               Phone
             </h3>
@@ -57,7 +57,7 @@ export default function ContactSection() {
             rel="noopener noreferrer"
             className="group bg-black border border-gray-800 rounded-lg p-6 hover:border-gray-700 hover:transform hover:scale-105 transition-all duration-300"
           >
-            <div className="text-4xl mb-4">📄</div>
+            {/* <div className="text-4xl mb-4">📄</div> */}
             <h3 className="text-lg font-semibold text-gray-400 mb-2 group-hover:text-gray-300 transition-colors">
               Resume
             </h3>
@@ -81,7 +81,7 @@ export default function ContactSection() {
                 rel="noopener noreferrer"
                 className="group flex items-center gap-3 px-6 py-3 bg-black border border-gray-800 rounded-lg hover:border-white hover:bg-gray-900 transition-all duration-300 min-w-[140px] justify-center"
               >
-                <span className="text-2xl">{getSocialIcon(link.name)}</span>
+                {/* <span className="text-2xl">{getSocialIcon(link.name)}</span> */}
                 <span className="text-white font-medium group-hover:text-gray-200 transition-colors">
                   {link.name}
                 </span>

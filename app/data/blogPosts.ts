@@ -9,6 +9,13 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "#forbes-01",
+    title: "The Great AI Camera Paradox: Why Millions of Cameras Still Fail to Deliver Insight",
+    platform: "Forbes",
+    url: "https://www.forbes.com/councils/forbestechcouncil/2026/01/12/the-great-ai-camera-paradox-why-millions-of-cameras-still-fail-to-deliver-insight",
+    description: "Why millions of cameras still fail to deliver insight. ",
+  },
+  {
     id: "1",
     title: "Building Your First Video Pipeline - FFmpeg and MediaMTX Basics",
     platform: "HackerNoon",
